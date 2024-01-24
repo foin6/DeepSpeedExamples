@@ -3,21 +3,21 @@ nohup: ignoring input
   __import__('pkg_resources').require('deepspeed==0.11.2+fee29365')
 /home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
-[2024-01-22 23:09:08,633] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-[2024-01-22 23:09:12,729] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
-[2024-01-22 23:09:12,730] [INFO] [runner.py:570:main] cmd = /home/zixuwang/miniconda3/envs/deepspeed_1.1/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None ppl-baseline2self.py --model /home/zixuwang/my_project/DSE/HuggingFace/Models/bloom-3b/
+[2024-01-24 04:03:05,727] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-24 04:03:09,588] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-01-24 04:03:09,589] [INFO] [runner.py:570:main] cmd = /home/zixuwang/miniconda3/envs/deepspeed_1.1/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None ppl-baseline2self.py --model /home/zixuwang/my_project/DSE/HuggingFace/Models/bloom-3b/
 /home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
-[2024-01-22 23:09:18,796] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-[2024-01-22 23:09:20,542] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0]}
-[2024-01-22 23:09:20,542] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
-[2024-01-22 23:09:20,542] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
-[2024-01-22 23:09:20,542] [INFO] [launch.py:163:main] dist_world_size=1
-[2024-01-22 23:09:20,542] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-01-24 04:03:15,481] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-24 04:03:17,708] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-01-24 04:03:17,708] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-01-24 04:03:17,708] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-01-24 04:03:17,708] [INFO] [launch.py:163:main] dist_world_size=1
+[2024-01-24 04:03:17,708] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0
 /home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
 My guessed rank = 0
-[2024-01-22 23:09:26,784] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-24 04:03:23,021] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
 Warning: num_inputs (43) is greater than the number of test inputs (43). Using all test inputs.
 
 
@@ -28,7 +28,7 @@ baseline output:
  This is a test of the ability to identify the correct answer. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.1 input is: 1.373232126235962
+The cross perplexity of No.1 input is: 1.3726589679718018
 
 
 ===================================== No.2 input Processing =====================================
@@ -38,7 +38,7 @@ baseline output:
  One fish, two fish, red fish, blue fish, yellow fish, green fish, and a fish with a tail. The fish with a tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail is the one that is the most likely to be eaten. The fish with the tail
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.2 input is: 1.3818379640579224
+The cross perplexity of No.2 input is: 1.3811354637145996
 
 
 ===================================== No.3 input Processing =====================================
@@ -62,7 +62,7 @@ Microsoft has been working with partners to make the transition to a cloud-based
 Microsoft has been working with partners to make the
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.3 input is: 1.855709433555603
+The cross perplexity of No.3 input is: 1.8529855012893677
 
 
 ===================================== No.4 input Processing =====================================
@@ -72,7 +72,7 @@ baseline output:
  The ancient art of basket weaving is a fascinating and ancient art. It is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The art of basket weaving is a very ancient art that has been practiced for thousands of years. The
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.4 input is: 1.2547376155853271
+The cross perplexity of No.4 input is: 1.2543491125106812
 
 
 ===================================== No.5 input Processing =====================================
@@ -88,7 +88,7 @@ Learning a language model from a small corpus is a challenging task. The most co
 Learning a language model from a small corpus is a challenging task. The most common approach is to use a large corpus to train a language model.
 ------------------------------------------------------------
 The similarity ratio is: 98.89558232931726%
-The cross perplexity of No.5 input is: 2.241265058517456
+The cross perplexity of No.5 input is: 2.2412025928497314
 
 
 ===================================== No.6 input Processing =====================================
@@ -98,7 +98,7 @@ baseline output:
  You shouldn't buy a car without first checking the car's history. If you have a car that has been involved in an accident, you should check the car's history. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a car that has been involved in a car accident. You should also check the car's history if you have a
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.6 input is: 1.3575912714004517
+The cross perplexity of No.6 input is: 1.3564172983169556
 
 
 ===================================== No.7 input Processing =====================================
@@ -108,7 +108,7 @@ baseline output:
  In today's lesson, we will cover the conflict between the two main characters in the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the novel, the two main characters of the
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.7 input is: 1.1866910457611084
+The cross perplexity of No.7 input is: 1.1866391897201538
 
 
 ===================================== No.8 input Processing =====================================
@@ -118,7 +118,7 @@ baseline output:
  Interestingly, the humble bumblebee is essential to our food supply. It pollinates more than half of the world's crops, and it is the only insect that can pollinate plants in the dark. It is also the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that can pollinate plants in the dark. It is the only insect that
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.8 input is: 1.397349238395691
+The cross perplexity of No.8 input is: 1.395862102508545
 
 
 ===================================== No.9 input Processing =====================================
@@ -154,7 +154,7 @@ baseline output:
 - How many blue buttons and
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.9 input is: 1.0806005001068115
+The cross perplexity of No.9 input is: 1.0805931091308594
 
 
 ===================================== No.10 input Processing =====================================
@@ -164,7 +164,7 @@ baseline output:
  My favorite band is playing at a local music festival next month. I have been looking forward to it for a long time. I am excited to see them and I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends. I am excited to see my family. I am excited to see my friends.
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.10 input is: 1.3278917074203491
+The cross perplexity of No.10 input is: 1.325448989868164
 
 
 ===================================== No.11 input Processing =====================================
@@ -174,7 +174,7 @@ baseline output:
  Fortunately, I made it just in time to the event to tell her that I was going to be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she would be there. I wasn’t sure if she would be there, but I was sure that she
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.11 input is: 1.307399034500122
+The cross perplexity of No.11 input is: 1.306264877319336
 
 
 ===================================== No.12 input Processing =====================================
@@ -184,7 +184,7 @@ baseline output:
  Once upon a time in a galaxy far away, there lived a boy named Anakin who was a Jedi Knight. He was a good boy, but he was also a bad boy. He was a good boy because he loved his family and his friends. He was a bad boy because he loved to fight and to be the hero. He was a good boy because he was a Jedi Knight. He was a bad boy because he was a Jedi Knight. He was a good boy because he loved his family and his friends. He was a bad boy because he loved to fight and to be the hero. He was a good boy because he was a Jedi Knight. He was a bad boy because he loved to fight and to be the hero. He was a good boy because he was a Jedi Knight. He was a bad boy because he loved to fight and to be the hero. He was a good boy because he was a Jedi Knight. He was a bad boy
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.12 input is: 1.4301561117172241
+The cross perplexity of No.12 input is: 1.4283227920532227
 
 
 ===================================== No.13 input Processing =====================================
@@ -194,7 +194,7 @@ baseline output:
  It is projected that by the year 3035, there will be more humans on the planet than animals. This is a huge problem for the planet and the animals that live on it. The animals are suffering from the lack of food and water. The animals are also suffering from the lack of shelter and the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals
 ------------------------------------------------------------
 The similarity ratio is: 95.87366276107998%
-The cross perplexity of No.13 input is: 1.4949957132339478
+The cross perplexity of No.13 input is: 1.4921640157699585
 
 
 ===================================== No.14 input Processing =====================================
@@ -204,7 +204,7 @@ baseline output:
  Many years ago, we were hiking in the Amazon rain forest when we stumbled upon an impressive tree. It was a giant, over 100 feet tall, and it was covered in a thick, dark green bark. We were amazed by the size of the tree and the fact that it was still standing. We were also amazed by the fact that it was still alive. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still alive. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still standing. We were amazed by the fact that it was still standing. We were amazed by the
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.14 input is: 1.623427391052246
+The cross perplexity of No.14 input is: 1.620667576789856
 
 
 ===================================== No.15 input Processing =====================================
@@ -214,7 +214,7 @@ baseline output:
  Let's discuss today's agenda. First, we will go around and introduce ourselves. Next, we will cover our 3 essential markers for success: 1) the ability to identify and implement a strategy, 2) the ability to execute the strategy, and 3) the ability to measure the results of the strategy. We will also discuss the importance of the 3 key elements of a successful strategy, which are the following: 1) the ability to identify the problem, 2) the ability to define the problem, and 3) the ability to solve the problem. We will also discuss the importance of the 3 key elements of a successful strategy, which are the following: 1) the ability to identify the problem, 2) the ability to define the problem, and 3) the ability to solve the problem. We will also discuss the importance of the 3 key elements of a successful strategy, which are the following: 1) the ability to identify the problem, 2) the ability to define the problem, and 3) the ability to solve
 ------------------------------------------------------------
 The similarity ratio is: 31.756046267087278%
-The cross perplexity of No.15 input is: 1.423122763633728
+The cross perplexity of No.15 input is: 1.4225293397903442
 
 
 ===================================== No.16 input Processing =====================================
@@ -224,7 +224,7 @@ baseline output:
  These two historical figures are the most famous in the history of the United States. They are the first President of the United States and the first President of the United States of America. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to be elected by the people. They are also the first President of the United States to
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.16 input is: 1.4252564907073975
+The cross perplexity of No.16 input is: 1.4224722385406494
 
 
 ===================================== No.17 input Processing =====================================
@@ -234,7 +234,7 @@ baseline output:
  I saw a news article about a major scientific discovery that was made in the last few years. The article said that scientists had discovered that the human body can produce its own insulin. This is a very exciting discovery. It means that we can no longer have to take insulin injections. This is a huge step forward in the fight against diabetes. It is also a huge step forward in the fight against obesity. The article said that the insulin produced by the body is very similar to the insulin that is produced by the pancreas. This means that the body can produce insulin without having to go through the process of having to have a pancreas removed. This is a huge step forward in the fight against diabetes. It is also a huge step forward in the fight against obesity. The article said that the insulin produced by the body is very similar to the insulin that is produced by the pancreas. This means that the body can produce insulin without having to go through the process of having to have a panc
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.17 input is: 1.9870645999908447
+The cross perplexity of No.17 input is: 1.9826035499572754
 
 
 ===================================== No.18 input Processing =====================================
@@ -244,7 +244,7 @@ baseline output:
  A poem about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is about the beauty of the night sky. The poem is
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.18 input is: 1.1122641563415527
+The cross perplexity of No.18 input is: 1.1112513542175293
 
 
 ===================================== No.19 input Processing =====================================
@@ -254,7 +254,7 @@ baseline output:
  Improving mental health services for older people in the UK: a systematic review of the evidence". BMJ Open. 1 juin 2016;6(6):e012947. https://doi.org/10.1136/bmjopen-2016-012947. [43] M. A. B. van der Linden, M. J. van der Linden, et al. "Improving mental health services for older people in the UK: a systematic review of the evidence". BMJ Open. 1 juin 2016;6(6):e012947. https://doi.org/10.1136/bmjopen-2016-012947. [44] M. A. B. van der Linden, M. J. van der Linden, et al. "Improving mental health services for older people in the UK: a systematic review of the evidence". BMJ Open. 1 juin 2016;6(6):e012947. https://doi.org/10.1136
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.19 input is: 1.674405574798584
+The cross perplexity of No.19 input is: 1.674159288406372
 
 
 ===================================== No.20 input Processing =====================================
@@ -264,7 +264,7 @@ baseline output:
  Being a professional athlete, you have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game. You have to be able to handle the pressure of the game
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.20 input is: 1.2039813995361328
+The cross perplexity of No.20 input is: 1.203363060951233
 
 
 ===================================== No.21 input Processing =====================================
@@ -274,7 +274,7 @@ baseline output:
  There are many exotic travel destinations in the world, but the most popular are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are known for their natural beauty. The most popular destinations are the ones that are
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.21 input is: 1.2702186107635498
+The cross perplexity of No.21 input is: 1.2697476148605347
 
 
 ===================================== No.22 input Processing =====================================
@@ -284,7 +284,7 @@ baseline output:
  She needed a recipe for a unique and delicious dessert. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family and friends. She wanted to make something that would be a hit with her family
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.22 input is: 1.23456609249115
+The cross perplexity of No.22 input is: 1.2338027954101562
 
 
 ===================================== No.23 input Processing =====================================
@@ -294,7 +294,7 @@ baseline output:
  The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or her ideas. The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or her ideas. The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or her ideas. The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or her ideas. The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or her ideas. The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or her ideas. The process of creating a work of art is a process of discovery. The artist is always looking for new ways to express his or
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.23 input is: 1.2384127378463745
+The cross perplexity of No.23 input is: 1.2377734184265137
 
 
 ===================================== No.24 input Processing =====================================
@@ -304,7 +304,7 @@ baseline output:
  The importance of renewable energy has been a popular topic among the public and the government. The government has been promoting the use of renewable energy sources, such as solar energy, wind energy, and biomass energy, to reduce the dependence on fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also been promoting the use of renewable energy sources to reduce the environmental impact of fossil fuels. The government has also
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.24 input is: 1.467725396156311
+The cross perplexity of No.24 input is: 1.4674590826034546
 
 
 ===================================== No.25 input Processing =====================================
@@ -314,18 +314,17 @@ baseline output:
  Hiking to the top of a mountain is no easy task. It can takes several hours and even days to reach the top. However, if you are a mountain climber, you can easily reach the top of the mountain in a few minutes. The mountain climbing is a sport that requires a lot of strength and endurance. It is also a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport that requires a lot of physical and mental strength. The mountain climbing is a sport
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.25 input is: 1.5407357215881348
+The cross perplexity of No.25 input is: 1.5392476320266724
 
 
 ===================================== No.26 input Processing =====================================
 original baseline output:
  His latest clothing collection was all the rave at the last year's fashion week. Several of the pieces were inspired by the late, great fashion icon Coco Chanel. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and
 baseline output:
- His latest clothing collection was all the rave at the last year's fashion week. Several of the pieces were inspired by the late, great fashion icon Coco Chanel.</s>The first thing you need to do is to find a good online casino. There are many online casinos out there, and you need to find one that is reputable and has a good reputation. You can also check out the reviews of the casino to see what other people have to say about it. You can also check out the bonuses that the casino offers to see if they are worth the money.</s>The first thing you need to do is to find a good online casino. There are many online casinos out there, and you need to find one that is reputable and has a good reputation. You can also check out the reviews of the casino to see what other people have to say about it. You can also check out the bonuses that the casino offers to see if they are worth the money.
-The first thing you
+ His latest clothing collection was all the rave at the last year's fashion week. Several of the pieces were inspired by the late, great fashion icon Coco Chanel. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and modern styles, and the pieces were all very well made. The collection was a mix of classic and
 ------------------------------------------------------------
-The similarity ratio is: 21.08626198083067%
-The cross perplexity of No.26 input is: 1.4696428775787354
+The similarity ratio is: 100.0%
+The cross perplexity of No.26 input is: 1.4669640064239502
 
 
 ===================================== No.27 input Processing =====================================
@@ -336,10 +335,14 @@ original baseline output:
 3. What is the most important thing that you have learned about the topic of the day? What is the most important thing that you have learned about the topic of the day?
 4. What is the most important thing that you have learned about the topic of the day? What is the most
 baseline output:
- Here's a list of 10 thought-provoking discussion questions that will help you think about the topic of the day.</s>The first thing you need to do is to get a good quality camera. You can get a good quality camera for less than $100. You can also get a good quality camera for less than $50. You can also get a good quality camera for less than $25. You can also get a good quality camera for less than $10. You can also get a good quality camera for less than $5. You can also get a good quality camera for less than $2. You can also get a good quality camera for less than $1. You can also get a good quality camera for less than $0.50. You can also get a good quality camera for less than $0.25. You can also get a good quality camera for less than $0.10. You can also get a good quality camera for less than $0.05. You can also get a good quality camera for less
+ Here's a list of 10 thought-provoking discussion questions that will help you think about the topic of the day. You can use these questions to guide your discussion, or you can use them as a jumping-off point for your own discussion. You can also use these questions to help you think about the topic of the day in your own writing.
+1. What is the most important thing that you have learned about the topic of the day? What is the most important thing that you have learned about the topic of the day?
+2. What is the most important thing that you have learned about the topic of the day? What is the most important thing that you have learned about the topic of the day?
+3. What is the most important thing that you have learned about the topic of the day? What is the most important thing that you have learned about the topic of the day?
+4. What is the most important thing that you have learned about the topic of the day? What is the most
 ------------------------------------------------------------
-The similarity ratio is: 15.052573325954622%
-The cross perplexity of No.27 input is: 1.6836012601852417
+The similarity ratio is: 100.0%
+The cross perplexity of No.27 input is: 1.6807701587677002
 
 
 ===================================== No.28 input Processing =====================================
@@ -349,7 +352,7 @@ baseline output:
  The show last night had to be postponed due to weather. I heard that people waited hours in the rain to see the show. I was glad to see that the rain stopped. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.28 input is: 1.2880326509475708
+The cross perplexity of No.28 input is: 1.2852915525436401
 
 
 ===================================== No.29 input Processing =====================================
@@ -367,7 +370,7 @@ baseline output:
 • Return on Assets
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.29 input is: 1.4647793769836426
+The cross perplexity of No.29 input is: 1.4644972085952759
 
 
 ===================================== No.30 input Processing =====================================
@@ -383,7 +386,7 @@ I love the quote from Psalm 37: “For I know the plans I have for you,” decla
 I love the quote from Psalm 37: “For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.30 input is: 1.2923915386199951
+The cross perplexity of No.30 input is: 1.2916001081466675
 
 
 ===================================== No.31 input Processing =====================================
@@ -393,7 +396,7 @@ baseline output:
  A magical creature living in a hidden forest. The creature is a giant, black, and white cat with a long tail. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be a descendant of the ancient gods. The creature is said to be
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.31 input is: 1.4043563604354858
+The cross perplexity of No.31 input is: 1.402944803237915
 
 
 ===================================== No.32 input Processing =====================================
@@ -403,7 +406,7 @@ baseline output:
  The preparation of a gourmet meal is a time-consuming process. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet meal requires a lot of time and effort. The preparation of a gourmet
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.32 input is: 1.1883714199066162
+The cross perplexity of No.32 input is: 1.1878383159637451
 
 
 ===================================== No.33 input Processing =====================================
@@ -413,7 +416,7 @@ baseline output:
  I overheard two scientists discussing a groundbreaking scientific theory. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing the possibility of a new type of energy source. The scientists were discussing
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.33 input is: 1.2029144763946533
+The cross perplexity of No.33 input is: 1.2026243209838867
 
 
 ===================================== No.34 input Processing =====================================
@@ -423,7 +426,7 @@ baseline output:
  He wrote a blog post about the benefits of mindfulness and meditation. He also wrote a book called The Art of Mindfulness. He is a certified meditation teacher and has taught meditation for over 20 years. He is also a certified yoga teacher and has taught yoga for over 20 years. He is a certified mindfulness teacher and has taught mindfulness for over 20 years. He is a certified meditation teacher and has taught meditation for over 20 years. He is a certified yoga teacher and has taught yoga for over 20 years. He is a certified mindfulness teacher and has taught mindfulness for over 20 years. He is a certified meditation teacher and has taught meditation for over 20 years. He is a certified yoga teacher and has taught yoga for over 20 years. He is a certified mindfulness teacher and has taught mindfulness for over 20 years. He is a certified meditation teacher and has taught meditation for over 20
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.34 input is: 1.4501965045928955
+The cross perplexity of No.34 input is: 1.445071816444397
 
 
 ===================================== No.35 input Processing =====================================
@@ -433,7 +436,7 @@ baseline output:
  This set of instructions for assembling a piece of furniture is called a plan. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a set of instructions for assembling a piece of furniture. A plan is a
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.35 input is: 1.1753638982772827
+The cross perplexity of No.35 input is: 1.174534559249878
 
 
 ===================================== No.36 input Processing =====================================
@@ -443,7 +446,7 @@ baseline output:
  Training for a marathon is a long and arduous process. It is a process that requires a lot of patience, determination, and perseverance. It is a process that requires a lot of time and effort. It is a process that requires a lot of money. It is a process that requires a lot of dedication. It is a process that requires a lot of time and effort. It is a process that requires a lot of patience. It is a process that requires a lot of determination. It is a process that requires a lot of perseverance. It is a process that requires a lot of time and effort. It is a process that requires a lot of money. It is a process that requires a lot of dedication. It is a process that requires a lot of time and effort. It is a process that requires a lot of patience. It is a process that requires a lot of determination. It is a process that requires a lot of perseverance. It is a process that
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.36 input is: 1.409958839416504
+The cross perplexity of No.36 input is: 1.408962368965149
 
 
 ===================================== No.37 input Processing =====================================
@@ -453,7 +456,7 @@ baseline output:
  What are your hopes and dreams for the world? What do you want to see happen in the world? What do you want to see happen in your life? What do you want to see happen in your community? What do you want to see happen in your country? What do you want to see happen in your city? What do you want to see happen in your neighborhood? What do you want to see happen in your community? What do you want to see happen in your country? What do you want to see happen in your city? What do you want to see happen in your neighborhood? What do you want to see happen in your community? What do you want to see happen in your country? What do you want to see happen in your city? What do you want to see happen in your neighborhood? What do you want to see happen in your community? What do you want to see happen in your country? What do you want to see happen in your city? What do you
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.37 input is: 1.2616921663284302
+The cross perplexity of No.37 input is: 1.2603334188461304
 
 
 ===================================== No.38 input Processing =====================================
@@ -463,7 +466,7 @@ baseline output:
  Imagine you are a time traveler. Write a journal entry about your visit to a historical event. What did you see? What did you hear? What did you feel? What did you think? What did you learn? What did you do? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What did you discover? What
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.38 input is: 1.202656865119934
+The cross perplexity of No.38 input is: 1.199769139289856
 
 
 ===================================== No.39 input Processing =====================================
@@ -493,7 +496,7 @@ The list should be formatted as a table with the following columns:
 The list should be formatted as a table with the following columns:
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.39 input is: 1.5006930828094482
+The cross perplexity of No.39 input is: 1.4981952905654907
 
 
 ===================================== No.40 input Processing =====================================
@@ -503,7 +506,7 @@ baseline output:
  She gave speech advocating for equal rights for women and for the rights of the disabled. She was a member of the National Women's Rights Association and the National Council of Women. She was a member of the National Women's Conference and the National Women's Conference of the United States. She was a member of the National Women's Conference of the United States and the National Women's Conference of the United States. She was a member of the National Women's Conference of the United States and the National Women's Conference of the United States. She was a member of the National Women's Conference of the United States and the National Women's Conference of the United States. She was a member of the National Women's Conference of the United States and the National Women's Conference of the United States. She was a member of the National Women's Conference of the United States and the National Women's Conference of the United States. She was a member of the National Women's Conference of the United States and the National Women's Conference of the United States. She was a member of the National Women's
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.40 input is: 1.4894009828567505
+The cross perplexity of No.40 input is: 1.4862949848175049
 
 
 ===================================== No.41 input Processing =====================================
@@ -513,7 +516,7 @@ baseline output:
  The process of producing a documentary film is a long and complex process. The film is made up of many different elements, and each of these elements must be carefully considered and planned for. The filmmaker must be able to think about the film in a holistic way, and the film must be able to reflect the filmmaker’s vision. The filmmaker must also be able to think about the film in a way that is consistent with the film’s message. The filmmaker must also be able to think about the film in a way that is consistent with the film’s message. The filmmaker must also be able to think about the film in a way that is consistent with the film’s message. The filmmaker must also be able to think about the film in a way that is consistent with the film’s message. The filmmaker must also be able to think about the film in a way that is consistent with the film’s message. The filmmaker must also be able to think about the film
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.41 input is: 1.8397371768951416
+The cross perplexity of No.41 input is: 1.8371925354003906
 
 
 ===================================== No.42 input Processing =====================================
@@ -523,7 +526,7 @@ baseline output:
  With a flick of a wand, the magician made the rabbit disappear. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit was gone, but the magician was still there. The rabbit
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.42 input is: 1.1773879528045654
+The cross perplexity of No.42 input is: 1.1756373643875122
 
 
 ===================================== No.43 input Processing =====================================
@@ -535,10 +538,10 @@ baseline output:
 The market was a bustling marketplace. There were at least 100 vendors and dozens of stalls selling everything from fresh produce to jewelry and clothing. The vendors were all dressed in traditional costumes, and the atmosphere was festive and lively. The vendors were all dressed in traditional costumes, and the atmosphere was festive and lively. The vendors were all dressed in traditional costumes, and the atmosphere was festive and lively. The vendors were all dressed in traditional costumes, and the atmosphere was festive and lively. The vendors were all dressed in traditional costumes, and the atmosphere was festive and lively. The vendors were
 ------------------------------------------------------------
 The similarity ratio is: 100.0%
-The cross perplexity of No.43 input is: 1.4183659553527832
+The cross perplexity of No.43 input is: 1.4161615371704102
 ------------------------------------------------------------
 The total perplexity:
-[tensor(1.3732, device='xpu:0'), tensor(1.3818, device='xpu:0'), tensor(1.8557, device='xpu:0'), tensor(1.2547, device='xpu:0'), tensor(2.2413, device='xpu:0'), tensor(1.3576, device='xpu:0'), tensor(1.1867, device='xpu:0'), tensor(1.3973, device='xpu:0'), tensor(1.0806, device='xpu:0'), tensor(1.3279, device='xpu:0'), tensor(1.3074, device='xpu:0'), tensor(1.4302, device='xpu:0'), tensor(1.4950, device='xpu:0'), tensor(1.6234, device='xpu:0'), tensor(1.4231, device='xpu:0'), tensor(1.4253, device='xpu:0'), tensor(1.9871, device='xpu:0'), tensor(1.1123, device='xpu:0'), tensor(1.6744, device='xpu:0'), tensor(1.2040, device='xpu:0'), tensor(1.2702, device='xpu:0'), tensor(1.2346, device='xpu:0'), tensor(1.2384, device='xpu:0'), tensor(1.4677, device='xpu:0'), tensor(1.5407, device='xpu:0'), tensor(1.4696, device='xpu:0'), tensor(1.6836, device='xpu:0'), tensor(1.2880, device='xpu:0'), tensor(1.4648, device='xpu:0'), tensor(1.2924, device='xpu:0'), tensor(1.4044, device='xpu:0'), tensor(1.1884, device='xpu:0'), tensor(1.2029, device='xpu:0'), tensor(1.4502, device='xpu:0'), tensor(1.1754, device='xpu:0'), tensor(1.4100, device='xpu:0'), tensor(1.2617, device='xpu:0'), tensor(1.2027, device='xpu:0'), tensor(1.5007, device='xpu:0'), tensor(1.4894, device='xpu:0'), tensor(1.8397, device='xpu:0'), tensor(1.1774, device='xpu:0'), tensor(1.4184, device='xpu:0')]
+[tensor(1.3727, device='xpu:0'), tensor(1.3811, device='xpu:0'), tensor(1.8530, device='xpu:0'), tensor(1.2543, device='xpu:0'), tensor(2.2412, device='xpu:0'), tensor(1.3564, device='xpu:0'), tensor(1.1866, device='xpu:0'), tensor(1.3959, device='xpu:0'), tensor(1.0806, device='xpu:0'), tensor(1.3254, device='xpu:0'), tensor(1.3063, device='xpu:0'), tensor(1.4283, device='xpu:0'), tensor(1.4922, device='xpu:0'), tensor(1.6207, device='xpu:0'), tensor(1.4225, device='xpu:0'), tensor(1.4225, device='xpu:0'), tensor(1.9826, device='xpu:0'), tensor(1.1113, device='xpu:0'), tensor(1.6742, device='xpu:0'), tensor(1.2034, device='xpu:0'), tensor(1.2697, device='xpu:0'), tensor(1.2338, device='xpu:0'), tensor(1.2378, device='xpu:0'), tensor(1.4675, device='xpu:0'), tensor(1.5392, device='xpu:0'), tensor(1.4670, device='xpu:0'), tensor(1.6808, device='xpu:0'), tensor(1.2853, device='xpu:0'), tensor(1.4645, device='xpu:0'), tensor(1.2916, device='xpu:0'), tensor(1.4029, device='xpu:0'), tensor(1.1878, device='xpu:0'), tensor(1.2026, device='xpu:0'), tensor(1.4451, device='xpu:0'), tensor(1.1745, device='xpu:0'), tensor(1.4090, device='xpu:0'), tensor(1.2603, device='xpu:0'), tensor(1.1998, device='xpu:0'), tensor(1.4982, device='xpu:0'), tensor(1.4863, device='xpu:0'), tensor(1.8372, device='xpu:0'), tensor(1.1756, device='xpu:0'), tensor(1.4162, device='xpu:0')]
 The total similarity:
-[1.0, 1.0, 1.0, 1.0, 0.9889558232931727, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9587366276107998, 1.0, 0.3175604626708728, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.2108626198083067, 0.1505257332595462, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
-[2024-01-22 23:33:56,154] [INFO] [launch.py:347:main] Process 145451 exits successfully.
+[1.0, 1.0, 1.0, 1.0, 0.9889558232931727, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9587366276107998, 1.0, 0.3175604626708728, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[2024-01-24 04:27:00,224] [INFO] [launch.py:347:main] Process 39201 exits successfully.

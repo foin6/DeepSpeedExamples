@@ -22,6 +22,7 @@ def string_similarity(str1, str2):
     similarity_ratio = matcher.ratio()
     return similarity_ratio
 
+eos_id = 2
 input_length = 512
 output_length = 512
 device = get_accelerator().device_name()
@@ -40,7 +41,8 @@ wiki_contents = tokenizer.decode(wiki_ids)
 seq_len = len(encod_ids)
 ppl = 0
 predict_content = str()
-for begin_loc in tqdm(range(output_length), desc="Calculating Perplexity: ", ncols=100):
+# for begin_loc in tqdm(range(output_length), desc="Calculating Perplexity: ", ncols=100):
+for begin_loc in range(output_length):
     end_loc = min(begin_loc+input_length, seq_len)
     input_ids = encod_ids[begin_loc:end_loc]
     xi_id = encod_ids[end_loc]
@@ -49,9 +51,9 @@ for begin_loc in tqdm(range(output_length), desc="Calculating Perplexity: ", nco
     input_encode = tokenizer(input_content, return_tensors="pt").to(device)
     with torch.no_grad():
         outputs = model(**input_encode)
-        logits = outputs.logits
-        probs = torch.softmax(logits, dim=-1)
-        last_word_probs = probs[0, -1, :]
+        last_word_logits = outputs.logits[0, -1, :]
+        last_word_logits[eos_id] = -float("inf")
+        last_word_probs = torch.softmax(last_word_logits, dim=-1)
         max_prob_idx = torch.argmax(last_word_probs, dim=-1)
         predict_word = tokenizer.decode(max_prob_idx)
         predict_content = predict_content + predict_word

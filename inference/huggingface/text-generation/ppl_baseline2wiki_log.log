@@ -3,22 +3,22 @@ nohup: ignoring input
   __import__('pkg_resources').require('deepspeed==0.11.2+fee29365')
 /home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
-[2024-01-22 22:27:39,573] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-[2024-01-22 22:27:42,180] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
-[2024-01-22 22:27:42,181] [INFO] [runner.py:570:main] cmd = /home/zixuwang/miniconda3/envs/deepspeed_1.1/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None ppl-baseline2wiki.py --model /home/zixuwang/my_project/DSE/HuggingFace/Models/bloom-3b/
+[2024-01-24 05:01:47,015] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-24 05:01:50,810] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-01-24 05:01:50,811] [INFO] [runner.py:570:main] cmd = /home/zixuwang/miniconda3/envs/deepspeed_1.1/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None ppl-baseline2wiki.py --model /home/zixuwang/my_project/DSE/HuggingFace/Models/bloom-3b/
 /home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
-[2024-01-22 22:27:47,147] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-[2024-01-22 22:27:48,807] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0]}
-[2024-01-22 22:27:48,807] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
-[2024-01-22 22:27:48,807] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
-[2024-01-22 22:27:48,807] [INFO] [launch.py:163:main] dist_world_size=1
-[2024-01-22 22:27:48,807] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0
+[2024-01-24 05:01:56,775] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-24 05:01:59,088] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-01-24 05:01:59,088] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-01-24 05:01:59,088] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-01-24 05:01:59,088] [INFO] [launch.py:163:main] dist_world_size=1
+[2024-01-24 05:01:59,088] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0
 /home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
 My guessed rank = 0
-[2024-01-22 22:27:53,780] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-2024-01-22 22:28:03,455 - datasets - INFO - PyTorch version 2.1.1 available.
+[2024-01-24 05:02:04,914] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+2024-01-24 05:02:17,317 - datasets - INFO - PyTorch version 2.1.1 available.
 wikitext2:  the role , and he received critical reviews in The Herald , and Evening Standard . He appeared in the television series Judge John Deed in 2002 as " Addem Armitage " in the episode " Political Expediency " , and had a role as a different character " Toby Steele " on The Bill . 
 
 
@@ -41,6 +41,6 @@ baseline output:  the role . and said was a ac for the Guardian Sun The The Stan
 
  In 2006 Boulter starred in the television The of , by Simon Gathill , The play was performed of the series of included the playswrights , and Theing Burnillom . Thehip . Bo 2007 review interview with Bo actor Ben Whishaw said Boulter as one of his favourite actors-st-@ actors . " I think Robert with Robert guy like Robert Boulter . he was a the play bill . Burn / Chatroom and Citizenship . the Drum Theatre " was a character in Burn Fur , " Bo startrayed " Simon " " in the television television of The television series The Theoctors , as " The to Neverte " . Boulter starred in " Mark " in the 2007 film of the to Makese a by Johnie Rourke at The to Curse was performed at the Theatre in London West Borough of Barnersmith and Fulham . Bo 2008 2008 of the production in The Guardian Telegraph , the critic John Mc wrote , " Bo Boulter is a warm and to the role . William , " Bo
 ------------------------------------------------------------
-The perplexity of baseline on wikitext2 is: 12.785103797912598
+The perplexity of baseline on wikitext2 is: 12.784106254577637
 The similarity ratio is: 8.25836216839677%
-[2024-01-22 22:30:53,020] [INFO] [launch.py:347:main] Process 141962 exits successfully.
+[2024-01-24 05:04:28,280] [INFO] [launch.py:347:main] Process 48445 exits successfully.

@@ -16,6 +16,7 @@ parser.add_argument("--max_length", default=200, type=int, help="maximum tokens 
 parser.add_argument("--local_rank", type=int, default=0, help="local rank")
 parser.add_argument("--use_kernel", default=True, help="enable kernel-injection")
 args = parser.parse_args()
+eos_id = 2
 output_len = 200 # input text length + generated text length
 checkpoint = args.model
 device = get_accelerator().device_name()
@@ -32,9 +33,9 @@ def get_baseline_outputs(prompt):
         input_ids = tokenizer(prompt, return_tensors="pt").to(device)
         with torch.no_grad():
             outputs = model(**input_ids)
-            logits = outputs.logits
-        probs = torch.softmax(logits, dim=-1)
-        last_word_probs = probs[0, -1, :]
+            last_word_logits = outputs.logits[0, -1, :]
+            last_word_logits[eos_id] = -float("inf")
+        last_word_probs = torch.softmax(last_word_logits, dim=-1)
         max_prob_idx = torch.argmax(last_word_probs, dim=-1)
         predict_word = tokenizer.decode(max_prob_idx)
         prompt = prompt + predict_word
@@ -44,7 +45,8 @@ def cal_cross_perplexity(ds_input, ds_output):
     ds_input_ids = tokenizer(ds_input, return_tensors="pt")['input_ids'][0]
     ds_output_ids = tokenizer(ds_output, return_tensors="pt")['input_ids'][0]
     plexity = 0
-    for i in tqdm(range(output_len-len(ds_input_ids)), desc="Calculating Perplexity: ", ncols=100):
+    # for i in tqdm(range(output_len-len(ds_input_ids)), desc="Calculating Perplexity: ", ncols=100):
+    for i in range(output_len-len(ds_input_ids)):
         baseline_input_len = len(ds_input_ids)+i
 
         baseline_input_ids = ds_output_ids[:baseline_input_len] # set first i-1 tokens as inputs of baseline model
@@ -54,9 +56,9 @@ def cal_cross_perplexity(ds_input, ds_output):
         encode_baseline_input = tokenizer(baseline_input, return_tensors="pt").to(device)
         with torch.no_grad():
             outputs = model(**encode_baseline_input)
-            logits = outputs.logits
-            probs = torch.softmax(logits, dim=-1)
-            last_word_probs = probs[0, -1, :]
+            last_word_logits = outputs.logits[0, -1, :]
+            last_word_logits[eos_id] = -float("inf")
+            last_word_probs = torch.softmax(last_word_logits, dim=-1)
             prob_xi = torch.log(last_word_probs[x_id])
             plexity = plexity + prob_xi
     plexity = torch.exp(-1*plexity/output_len)

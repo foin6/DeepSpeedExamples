@@ -16,6 +16,7 @@ parser.add_argument("--max_length", default=200, type=int, help="maximum tokens 
 parser.add_argument("--local_rank", type=int, default=0, help="local rank")
 parser.add_argument("--use_kernel", default=True, help="enable kernel-injection")
 args = parser.parse_args()
+eos_id = 2
 output_len = 200 # input text length + generated text length
 checkpoint = args.model
 device = get_accelerator().device_name()
@@ -32,9 +33,9 @@ def get_ds_outputs(prompt, model_ds):
         input_encode = tokenizer(prompt, return_tensors="pt").to(device)
         with torch.no_grad():
             module = model_ds.module(**input_encode)
-            logits = module.logits
-        probs = torch.softmax(logits, dim=-1)
-        last_word_probs = probs[0, -1, :]
+            last_word_logits = module.logits[0, -1, :]
+            last_word_logits[eos_id] = -float("inf")
+        last_word_probs = torch.softmax(last_word_logits, dim=-1)
         max_prob_idx = torch.argmax(last_word_probs, dim=-1)
         predict_word = tokenizer.decode(max_prob_idx)
         prompt = prompt + predict_word
@@ -44,7 +45,8 @@ def cal_cross_perplexity(ref_input_tokens, ref_output_tokens, model_ds):
     ref_input_ids = tokenizer(ref_input_tokens, return_tensors="pt")['input_ids'][0]
     ref_output_ids = tokenizer(ref_output_tokens, return_tensors="pt")['input_ids'][0]
     ppl = 0
-    for i in tqdm(range(output_len-len(ref_input_ids)), desc="Calculating Perplexity: ", ncols=100):
+    # for i in tqdm(range(output_len-len(ref_input_ids)), desc="Calculating Perplexity: ", ncols=100):
+    for i in range(output_len-len(ref_input_ids)):
         input_len = len(ref_input_ids)+i
 
         input_ids = ref_output_ids[:input_len] # set first i-1 tokens as inputs of this model (baseline/ds)
@@ -54,9 +56,9 @@ def cal_cross_perplexity(ref_input_tokens, ref_output_tokens, model_ds):
         input_encode = tokenizer(input_text, return_tensors="pt").to(device)
         with torch.no_grad():
             module = model_ds.module(**input_encode)
-            logits = module.logits
-            probs = torch.softmax(logits, dim=-1)
-            last_word_probs = probs[0, -1, :]
+            last_word_logits = module.logits[0, -1, :]
+            last_word_logits[eos_id] = -float("inf")
+            last_word_probs = torch.softmax(last_word_logits, dim=-1)
             prob_xi = torch.log(last_word_probs[x_id])
             ppl = ppl + prob_xi
     ppl = torch.exp(-1*ppl/output_len)
