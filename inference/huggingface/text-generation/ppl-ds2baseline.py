@@ -27,6 +27,20 @@ def print_0(output):
     if args.local_rank == 0:
         print(output)
 
+def get_baseline_outputs(prompt):
+    prompt_ids =  tokenizer(prompt, return_tensors="pt")['input_ids'][0]
+    for _ in range(output_len-len(prompt_ids)):
+        input_ids = tokenizer(prompt, return_tensors="pt").to(device)
+        with torch.no_grad():
+            outputs = model(**input_ids)
+            last_word_logits = outputs.logits[0, -1, :]
+            last_word_logits[eos_id] = -float("inf")
+        last_word_probs = torch.softmax(last_word_logits, dim=-1)
+        max_prob_idx = torch.argmax(last_word_probs, dim=-1)
+        predict_word = tokenizer.decode(max_prob_idx)
+        prompt = prompt + predict_word
+    return prompt
+
 def get_ds_outputs(prompt, model_ds):
     prompt_ids =  tokenizer(prompt, return_tensors="pt")['input_ids'][0]
     for _ in range(output_len-len(prompt_ids)):
@@ -131,8 +145,7 @@ similar_list = list()
 cnt = 1
 for prompt in inputs:
     print_0("\n\n===================================== No.{} input Processing =====================================".format(cnt))
-    bl_out = pipe(prompt, do_sample=False, min_length=args.min_length, max_length=args.max_length)
-    bl_out_text = bl_out[0]['generated_text']
+    bl_out_text = get_baseline_outputs(prompt)
     ds_out_text = get_ds_outputs(prompt, model_ds)
     print_0(f"baseline output:\n {bl_out_text}")
     print_0(f"deepspeed output:\n {ds_out_text}")

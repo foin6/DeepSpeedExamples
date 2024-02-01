@@ -2,7 +2,7 @@ import torch
 from tqdm import tqdm
 import deepspeed
 from datasets import load_from_disk
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from difflib import SequenceMatcher
 from argparse import ArgumentParser
 from deepspeed.accelerator import get_accelerator

@@ -1,26 +1,26 @@
 nohup: ignoring input
-/home/zixuwang/miniconda3/envs/deepspeed_1.1/bin/deepspeed:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+/home/zixuwang/miniconda3/envs/deepspeed_auto/bin/deepspeed:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   __import__('pkg_resources').require('deepspeed==0.11.2+fee29365')
-/home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+/home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
-[2024-01-24 03:50:23,945] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-[2024-01-24 03:50:27,290] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
-[2024-01-24 03:50:27,291] [INFO] [runner.py:570:main] cmd = /home/zixuwang/miniconda3/envs/deepspeed_1.1/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None ppl-ds2baseline.py --model /home/zixuwang/my_project/DSE/HuggingFace/Models/bloom-3b/
-/home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+[2024-01-31 03:32:28,123] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-31 03:32:32,859] [WARNING] [runner.py:203:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2024-01-31 03:32:32,860] [INFO] [runner.py:570:main] cmd = /home/zixuwang/miniconda3/envs/deepspeed_auto/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMF19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None ppl-ds2baseline.py --model /home/zixuwang/my_project/DSE/HuggingFace/Models/bloom-3b/
+/home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
-[2024-01-24 03:50:32,998] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
-[2024-01-24 03:50:35,147] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0]}
-[2024-01-24 03:50:35,147] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
-[2024-01-24 03:50:35,147] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
-[2024-01-24 03:50:35,147] [INFO] [launch.py:163:main] dist_world_size=1
-[2024-01-24 03:50:35,147] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0
-/home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+[2024-01-31 03:32:38,554] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-31 03:32:40,347] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0]}
+[2024-01-31 03:32:40,347] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
+[2024-01-31 03:32:40,347] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2024-01-31 03:32:40,347] [INFO] [launch.py:163:main] dist_world_size=1
+[2024-01-31 03:32:40,347] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0
+/home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: ''If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
   warn(
 My guessed rank = 0
-[2024-01-24 03:50:39,923] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
+[2024-01-31 03:32:45,643] [INFO] [real_accelerator.py:158:get_accelerator] Setting ds_accelerator to xpu (auto detect)
 Warning: num_inputs (43) is greater than the number of test inputs (43). Using all test inputs.
-[2024-01-24 03:52:51,104] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.11.2+fee29365, git-hash=fee29365, git-branch=HEAD
-[2024-01-24 03:52:51,105] [INFO] [logging.py:96:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2024-01-31 03:34:31,192] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.11.2+fee29365, git-hash=fee29365, git-branch=HEAD
+[2024-01-31 03:34:31,193] [INFO] [logging.py:96:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/pt_binding.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pt_binding.cpp have the same content
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/gelu.dp.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/gelu.dp.cpp have the same content
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/relu.dp.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/relu.dp.cpp have the same content
@@ -32,15 +32,330 @@ skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/transform.dp.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/transform.dp.cpp have the same content
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/pointwise_ops.dp.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pointwise_ops.dp.cpp have the same content
 Using /home/zixuwang/.cache/torch_extensions/py39_xpu as PyTorch extensions root...
-/home/zixuwang/miniconda3/envs/deepspeed_1.1/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py:1373: UserWarning: This extension has static linked onednn library. Please attaction to                 that, this path of onednn version maybe not match with the built-in version.
+/home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/xpu/cpp_extension.py:1373: UserWarning: This extension has static linked onednn library. Please attaction to                 that, this path of onednn version maybe not match with the built-in version.
   warnings.warn(
 Emitting ninja build file /home/zixuwang/.cache/torch_extensions/py39_xpu/transformer_inference/build.ninja...
 Building extension module transformer_inference...
 Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
-ninja: no work to do.
+[1/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF transform.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/transform.dp.cpp -o transform.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/transform.dp.cpp:8:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/transform.dp.cpp:8:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[2/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF relu.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/relu.dp.cpp -o relu.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/relu.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/relu.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[3/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF dequantize.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/dequantize.dp.cpp -o dequantize.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/dequantize.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/dequantize.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[4/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF pointwise_ops.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pointwise_ops.dp.cpp -o pointwise_ops.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pointwise_ops.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pointwise_ops.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[5/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF apply_rotary_pos_emb.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/apply_rotary_pos_emb.dp.cpp -o apply_rotary_pos_emb.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/apply_rotary_pos_emb.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/apply_rotary_pos_emb.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[6/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF gelu.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/gelu.dp.cpp -o gelu.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/gelu.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/gelu.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[7/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF softmax.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/softmax.dp.cpp -o softmax.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/softmax.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/softmax.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[8/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF layer_norm.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/layer_norm.dp.cpp -o layer_norm.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/layer_norm.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/layer_norm.dp.cpp:12:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/reduction_utils.h:765:1: warning: attribute 'aligned' is ignored, place it after "struct" to apply attribute to type declaration [-Wignored-attributes]
+__dpct_align__(8) struct IdxReduceResult {
+^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:32:42: note: expanded from macro '__dpct_align__'
+#define __dpct_align__(n) __attribute__((aligned(n)))
+                                         ^
+2 warnings generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/layer_norm.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/layer_norm.dp.cpp:12:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/reduction_utils.h:765:1: warning: attribute 'aligned' is ignored, place it after "struct" to apply attribute to type declaration [-Wignored-attributes]
+__dpct_align__(8) struct IdxReduceResult {
+^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:32:42: note: expanded from macro '__dpct_align__'
+#define __dpct_align__(n) __attribute__((aligned(n)))
+                                         ^
+2 warnings generated.
+[9/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF rms_norm.dp.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/rms_norm.dp.cpp -o rms_norm.dp.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/rms_norm.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/rms_norm.dp.cpp:12:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/reduction_utils.h:765:1: warning: attribute 'aligned' is ignored, place it after "struct" to apply attribute to type declaration [-Wignored-attributes]
+__dpct_align__(8) struct IdxReduceResult {
+^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:32:42: note: expanded from macro '__dpct_align__'
+#define __dpct_align__(n) __attribute__((aligned(n)))
+                                         ^
+2 warnings generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/rms_norm.dp.cpp:7:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/rms_norm.dp.cpp:12:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/reduction_utils.h:765:1: warning: attribute 'aligned' is ignored, place it after "struct" to apply attribute to type declaration [-Wignored-attributes]
+__dpct_align__(8) struct IdxReduceResult {
+^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:32:42: note: expanded from macro '__dpct_align__'
+#define __dpct_align__(n) __attribute__((aligned(n)))
+                                         ^
+2 warnings generated.
+[10/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx -MMD -MF pt_binding.o.d -DTORCH_EXTENSION_NAME=transformer_inference -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/includes -I/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/include/TH -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/include/sycl -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/include -isystem /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/include -isystem /home/zixuwang/miniconda3/envs/deepspeed_auto/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=1 -fPIC -std=c++17 -fsycl -fsycl-targets=spir64_gen -g -gdwarf-4 -O3 -std=c++17 -fPIC -DMKL_ILP64 -fno-strict-aliasing -fsycl -c /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pt_binding.cpp -o pt_binding.o 
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pt_binding.cpp:9:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+In file included from /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pt_binding.cpp:9:
+In file included from /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/dpct.hpp:21:
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:285:8: warning: 'set_max_work_item_sizes' is deprecated [-Wdeprecated-declarations]
+  prop.set_max_work_item_sizes(
+       ^
+/home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/includes/dpct/device.hpp:180:5: note: 'set_max_work_item_sizes' has been explicitly marked deprecated here
+  [[deprecated]] void
+    ^
+1 warning generated.
+[11/11] /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/compiler/2023.2.0/linux/bin/icpx pt_binding.o gelu.dp.o relu.dp.o layer_norm.dp.o rms_norm.dp.o softmax.dp.o dequantize.dp.o apply_rotary_pos_emb.dp.o transform.dp.o pointwise_ops.dp.o -shared -fsycl -fPIC -fsycl -fsycl-targets=spir64_gen -fsycl-max-parallel-link-jobs=8 -Xs "-options -cl-poison-unsupported-fp64-kernels,cl-intel-enable-auto-large-GRF-mode" -Xs "-device pvc" -Wl,-export-dynamic -lc10 -ltorch_cpu -ltorch -ltorch_python -L/home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/torch/lib -L/home/zixuwang/miniconda3/envs/deepspeed_auto/lib/python3.9/site-packages/intel_extension_for_pytorch/lib -L/home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/dnnl/2023.2.0/cpu_dpcpp_gpu_dpcpp/lib -Wl,--start-group /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/lib/intel64/libmkl_sycl.a /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/lib/intel64/libmkl_intel_ilp64.a /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/lib/intel64/libmkl_sequential.a /home/ftartagl/oneapi/inteloneapi-basekit-hpckit.2023.2.003/mkl/2023.2.0/lib/intel64/libmkl_core.a -Wl,--end-group -lsycl -lOpenCL -lpthread -lm -ldl -ldnnl -lintel-ext-pt-gpu -o transformer_inference.so
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+
+warning: kernel _ZTSZZ22launch_attn_softmax_v2IN4sycl3_V16detail9half_impl4halfEEvPT_S6_S6_fbbbiiiiiiiiPNS1_5queueEENKUlRNS1_7handlerEE3_clESA_EUlNS1_7nd_itemILi3EEEE_  compiled SIMD32 allocated 128 regs and spilled around 22
+
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+
+warning: kernel _ZTSZZ22launch_attn_softmax_v2IfEvPT_S1_S1_fbbbiiiiiiiiPN4sycl3_V15queueEENKUlRNS3_7handlerEE3_clES7_EUlNS3_7nd_itemILi3EEEE_  compiled SIMD32 allocated 128 regs and spilled around 22
+
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+
+warning: kernel _ZTSZZ15launch_fused_lnIN4sycl3_V16detail9half_impl4halfEEvPT_PKS5_S8_S8_fiiPNS1_5queueEENKUlRNS1_7handlerEE5_clESC_EUlNS1_7nd_itemILi3EEEE_  compiled SIMD32 allocated 128 regs and spilled around 1
+
+Build succeeded.
+Compilation from IR - skipping loading of FCL
+Build succeeded.
 Loading extension module transformer_inference...
-Time to load transformer_inference op: 0.6079368591308594 seconds
-[2024-01-24 03:52:51,775] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed-Inference config: {'layer_id': 0, 'hidden_size': 2560, 'intermediate_size': 10240, 'heads': 32, 'num_hidden_layers': -1, 'dtype': torch.float16, 'pre_layer_norm': True, 'norm_type': <NormType.LayerNorm: 1>, 'local_rank': -1, 'stochastic_mode': False, 'epsilon': 1e-05, 'mp_size': 1, 'scale_attention': True, 'triangular_masking': True, 'local_attention': False, 'window_size': 1, 'rotary_dim': -1, 'rotate_half': False, 'rotate_every_two': True, 'return_tuple': True, 'mlp_after_attn': True, 'mlp_act_func_type': <ActivationFuncType.GELU: 1>, 'specialized_mode': False, 'training_mp_size': 1, 'bigscience_bloom': True, 'max_out_tokens': 1024, 'min_out_tokens': 1, 'scale_attn_by_inverse_layer_idx': False, 'enable_qkv_quantization': False, 'use_mup': False, 'return_single_tuple': False, 'set_empty_params': False, 'transposed_mode': False, 'use_triton': False, 'triton_autotune': False, 'num_kv': -1, 'rope_theta': 10000}
+Time to load transformer_inference op: 242.91193866729736 seconds
+[2024-01-31 03:38:34,214] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed-Inference config: {'layer_id': 0, 'hidden_size': 2560, 'intermediate_size': 10240, 'heads': 32, 'num_hidden_layers': -1, 'dtype': torch.float16, 'pre_layer_norm': True, 'norm_type': <NormType.LayerNorm: 1>, 'local_rank': -1, 'stochastic_mode': False, 'epsilon': 1e-05, 'mp_size': 1, 'scale_attention': True, 'triangular_masking': True, 'local_attention': False, 'window_size': 1, 'rotary_dim': -1, 'rotate_half': False, 'rotate_every_two': True, 'return_tuple': True, 'mlp_after_attn': True, 'mlp_act_func_type': <ActivationFuncType.GELU: 1>, 'specialized_mode': False, 'training_mp_size': 1, 'bigscience_bloom': True, 'max_out_tokens': 1024, 'min_out_tokens': 1, 'scale_attn_by_inverse_layer_idx': False, 'enable_qkv_quantization': False, 'use_mup': False, 'return_single_tuple': False, 'set_empty_params': False, 'transposed_mode': False, 'use_triton': False, 'triton_autotune': False, 'num_kv': -1, 'rope_theta': 10000}
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/pt_binding.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/pt_binding.cpp have the same content
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/gelu.dp.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/gelu.dp.cpp have the same content
 skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for_deepspeed/op_builder/csrc/transformer/inference/csrc/relu.dp.cpp and /home/zixuwang/my_project/LLM/llm.devkit/frameworks.ai.deepspeed/deepspeed/ops/third-party/csrc/transformer/inference/csrc/relu.dp.cpp have the same content
@@ -54,7 +369,7 @@ skip copy, /home/zixuwang/envs/intel-extension-for-deepspeed/intel_extension_for
 Using /home/zixuwang/.cache/torch_extensions/py39_xpu as PyTorch extensions root...
 No modifications detected for re-loaded extension module transformer_inference, skipping build step...
 Loading extension module transformer_inference...
-Time to load transformer_inference op: 0.005343437194824219 seconds
+Time to load transformer_inference op: 0.05847978591918945 seconds
 
 
 ===================================== No.1 input Processing =====================================
@@ -63,7 +378,7 @@ Free memory : 20.000000 (GigaBytes)
 Total memory: 0.000000 (GigaBytes)  
 Requested memory: 0.281250 (GigaBytes) 
 Setting maximum total tokens (input + output) to 1024 
-WorkSpace: 0xff8e79e0e00000 
+WorkSpace: 0xff8f3fabc00000 
 ------------------------------------------------------
 baseline output:
  This is a test of the ability to identify the correct answer. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the students. The correct answer is the one that is the most likely to be chosen by the majority of the
@@ -122,16 +437,16 @@ The cross perplexity of No.4 input is: 1.2529296875
 baseline output:
  Large language models are useful for many tasks, but they are not always available. In this paper, we propose a new approach to learning a language model from a small corpus. We use a simple but effective method to learn a language model from a small corpus. We show that our method can learn a language model from a small corpus with a high accuracy. We also show that our method can learn a language model from a small corpus with a high efficiency.
 Related Work
-Learning a language model from a small corpus is a challenging problem. The most common approach is to use a large corpus to train a language model. However, this approach is not always effective. For example, the language model trained from a large corpus may not be effective for a small corpus. In this paper, we propose a new approach to learn a language model from a small corpus.
-Learning a language model from a small corpus is a challenging problem. The most common approach is to use a large corpus to train a language model.
+Learning a language model from a small corpus is a challenging task. The most common approach is to use a large corpus to train a language model. However, this approach is not always effective. For example, the language model trained from a large corpus may not be effective for a small corpus. In this paper, we propose a new approach to learn a language model from a small corpus.
+Learning a language model from a small corpus is a challenging task. The most common approach is to use a large corpus to train a language model.
 deepspeed output:
  Large language models are useful for many tasks, but they are not always available. In this paper, we propose a new approach to learning a language model from a small corpus. We use a simple but effective method to learn a language model from a small corpus. We show that our method can learn a language model from a small corpus with a high accuracy. We also show that our method can learn a language model from a small corpus with a high efficiency.
 Related Work
 Learning a language model from a small corpus is a challenging problem. The most common approach is to use a large corpus to train a language model. However, this approach is not always effective. For example, the language model trained from a large corpus may not be effective for a small corpus. In this paper, we propose a new approach to learn a language model from a small corpus.
 Learning a language model from a small corpus is a challenging problem. The most common approach is to use a large corpus to train a language model.
 ------------------------------------------------------------
-The similarity ratio is: 100.0%
-The cross perplexity of No.5 input is: 2.232421875
+The similarity ratio is: 98.89558232931726%
+The cross perplexity of No.5 input is: 2.236328125
 
 
 ===================================== No.6 input Processing =====================================
@@ -232,12 +547,12 @@ The cross perplexity of No.12 input is: 1.4248046875
 
 ===================================== No.13 input Processing =====================================
 baseline output:
- It is projected that by the year 3035, there will be more humans on the planet than animals. This is a huge problem for the planet and the animals that live on it. The animals are suffering from the lack of food and water. The animals are also suffering from the lack of habitat. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack
+ It is projected that by the year 3035, there will be more humans on the planet than animals. This is a huge problem for the planet and the animals that live on it. The animals are suffering from the lack of food and water. The animals are also suffering from the lack of shelter and the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals
 deepspeed output:
  It is projected that by the year 3035, there will be more humans on the planet than animals. This is a huge problem for the planet and the animals that live on it. The animals are suffering from the lack of food and water. The animals are also suffering from the lack of habitat. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack of clean air. The animals are also suffering from the lack of clean water. The animals are also suffering from the lack
 ------------------------------------------------------------
-The similarity ratio is: 100.0%
-The cross perplexity of No.13 input is: 1.48828125
+The similarity ratio is: 95.87366276107998%
+The cross perplexity of No.13 input is: 1.521484375
 
 
 ===================================== No.14 input Processing =====================================
@@ -292,12 +607,12 @@ The cross perplexity of No.18 input is: 1.1103515625
 
 ===================================== No.19 input Processing =====================================
 baseline output:
- Improving mental health and well-being in the workplace: a systematic review and meta-analysis of interventions for employees with mental health problems". Journal of Occupational and Organizational Psychology. Vol. 83, No. 3, pp. 335–352. https://doi.org/10.1016/j.jop.2016.06.001. [60] A. M. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A.
+ Improving mental health services for older people in the UK: a systematic review of the evidence". BMJ Open. 1 juin 2016;6(6):e012947. https://doi.org/10.1136/bmjopen-2016-012947. [43] M. A. B. van der Linden, M. J. van der Linden, et al. "Improving mental health services for older people in the UK: a systematic review of the evidence". BMJ Open. 1 juin 2016;6(6):e012947. https://doi.org/10.1136/bmjopen-2016-012947. [44] M. A. B. van der Linden, M. J. van der Linden, et al. "Improving mental health services for older people in the UK: a systematic review of the evidence". BMJ Open. 1 juin 2016;6(6):e012947. https://doi.org/10.1136
 deepspeed output:
  Improving mental health and well-being in the workplace: a systematic review and meta-analysis of interventions for employees with mental health problems". Journal of Occupational and Organizational Psychology. Vol. 83, No. 3, pp. 335–352. https://doi.org/10.1016/j.jop.2016.06.001. [60] A. M. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A. A.
 ------------------------------------------------------------
-The similarity ratio is: 100.0%
-The cross perplexity of No.19 input is: 1.6396484375
+The similarity ratio is: 13.321492007104796%
+The cross perplexity of No.19 input is: 1.6689453125
 
 
 ===================================== No.20 input Processing =====================================
@@ -390,12 +705,12 @@ The cross perplexity of No.27 input is: 1.6787109375
 
 ===================================== No.28 input Processing =====================================
 baseline output:
- The show last night had to be postponed due to weather. I heard that people waited hours in the rain to see the show. I was glad to see that the rain stopped. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going
+ The show last night had to be postponed due to weather. I heard that people waited hours in the rain to see the show. I was glad to see that the rain stopped. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going to go on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that the show was going on. I was glad to see that
 deepspeed output:
  The show last night had to be postponed due to weather. I heard that people waited hours in the rain to see the show. I was glad to see that the rain stopped. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going to be on. I was glad to see that the show was going
 ------------------------------------------------------------
-The similarity ratio is: 100.0%
-The cross perplexity of No.28 input is: 1.2841796875
+The similarity ratio is: 26.373626373626376%
+The cross perplexity of No.28 input is: 1.283203125
 
 
 ===================================== No.29 input Processing =====================================
@@ -584,7 +899,7 @@ The similarity ratio is: 100.0%
 The cross perplexity of No.43 input is: 1.4130859375
 ------------------------------------------------------------
 The total perplexity:
-[tensor(1.3721, device='xpu:0', dtype=torch.float16), tensor(1.3789, device='xpu:0', dtype=torch.float16), tensor(1.8496, device='xpu:0', dtype=torch.float16), tensor(1.2529, device='xpu:0', dtype=torch.float16), tensor(2.2324, device='xpu:0', dtype=torch.float16), tensor(1.3535, device='xpu:0', dtype=torch.float16), tensor(1.1846, device='xpu:0', dtype=torch.float16), tensor(1.3945, device='xpu:0', dtype=torch.float16), tensor(1.0801, device='xpu:0', dtype=torch.float16), tensor(1.3242, device='xpu:0', dtype=torch.float16), tensor(1.3047, device='xpu:0', dtype=torch.float16), tensor(1.4248, device='xpu:0', dtype=torch.float16), tensor(1.4883, device='xpu:0', dtype=torch.float16), tensor(1.6182, device='xpu:0', dtype=torch.float16), tensor(1.6279, device='xpu:0', dtype=torch.float16), tensor(1.4189, device='xpu:0', dtype=torch.float16), tensor(1.9766, device='xpu:0', dtype=torch.float16), tensor(1.1104, device='xpu:0', dtype=torch.float16), tensor(1.6396, device='xpu:0', dtype=torch.float16), tensor(1.2021, device='xpu:0', dtype=torch.float16), tensor(1.2686, device='xpu:0', dtype=torch.float16), tensor(1.2324, device='xpu:0', dtype=torch.float16), tensor(1.2363, device='xpu:0', dtype=torch.float16), tensor(1.4629, device='xpu:0', dtype=torch.float16), tensor(1.5361, device='xpu:0', dtype=torch.float16), tensor(1.4658, device='xpu:0', dtype=torch.float16), tensor(1.6787, device='xpu:0', dtype=torch.float16), tensor(1.2842, device='xpu:0', dtype=torch.float16), tensor(1.4629, device='xpu:0', dtype=torch.float16), tensor(1.2910, device='xpu:0', dtype=torch.float16), tensor(1.3994, device='xpu:0', dtype=torch.float16), tensor(1.1865, device='xpu:0', dtype=torch.float16), tensor(1.2012, device='xpu:0', dtype=torch.float16), tensor(1.4414, device='xpu:0', dtype=torch.float16), tensor(1.1738, device='xpu:0', dtype=torch.float16), tensor(1.4053, device='xpu:0', dtype=torch.float16), tensor(1.2598, device='xpu:0', dtype=torch.float16), tensor(1.1992, device='xpu:0', dtype=torch.float16), tensor(1.4971, device='xpu:0', dtype=torch.float16), tensor(1.4834, device='xpu:0', dtype=torch.float16), tensor(1.8379, device='xpu:0', dtype=torch.float16), tensor(1.1748, device='xpu:0', dtype=torch.float16), tensor(1.4131, device='xpu:0', dtype=torch.float16)]
+[tensor(1.3721, device='xpu:0', dtype=torch.float16), tensor(1.3789, device='xpu:0', dtype=torch.float16), tensor(1.8496, device='xpu:0', dtype=torch.float16), tensor(1.2529, device='xpu:0', dtype=torch.float16), tensor(2.2363, device='xpu:0', dtype=torch.float16), tensor(1.3535, device='xpu:0', dtype=torch.float16), tensor(1.1846, device='xpu:0', dtype=torch.float16), tensor(1.3945, device='xpu:0', dtype=torch.float16), tensor(1.0801, device='xpu:0', dtype=torch.float16), tensor(1.3242, device='xpu:0', dtype=torch.float16), tensor(1.3047, device='xpu:0', dtype=torch.float16), tensor(1.4248, device='xpu:0', dtype=torch.float16), tensor(1.5215, device='xpu:0', dtype=torch.float16), tensor(1.6182, device='xpu:0', dtype=torch.float16), tensor(1.6279, device='xpu:0', dtype=torch.float16), tensor(1.4189, device='xpu:0', dtype=torch.float16), tensor(1.9766, device='xpu:0', dtype=torch.float16), tensor(1.1104, device='xpu:0', dtype=torch.float16), tensor(1.6689, device='xpu:0', dtype=torch.float16), tensor(1.2021, device='xpu:0', dtype=torch.float16), tensor(1.2686, device='xpu:0', dtype=torch.float16), tensor(1.2324, device='xpu:0', dtype=torch.float16), tensor(1.2363, device='xpu:0', dtype=torch.float16), tensor(1.4629, device='xpu:0', dtype=torch.float16), tensor(1.5361, device='xpu:0', dtype=torch.float16), tensor(1.4658, device='xpu:0', dtype=torch.float16), tensor(1.6787, device='xpu:0', dtype=torch.float16), tensor(1.2832, device='xpu:0', dtype=torch.float16), tensor(1.4629, device='xpu:0', dtype=torch.float16), tensor(1.2910, device='xpu:0', dtype=torch.float16), tensor(1.3994, device='xpu:0', dtype=torch.float16), tensor(1.1865, device='xpu:0', dtype=torch.float16), tensor(1.2012, device='xpu:0', dtype=torch.float16), tensor(1.4414, device='xpu:0', dtype=torch.float16), tensor(1.1738, device='xpu:0', dtype=torch.float16), tensor(1.4053, device='xpu:0', dtype=torch.float16), tensor(1.2598, device='xpu:0', dtype=torch.float16), tensor(1.1992, device='xpu:0', dtype=torch.float16), tensor(1.4971, device='xpu:0', dtype=torch.float16), tensor(1.4834, device='xpu:0', dtype=torch.float16), tensor(1.8379, device='xpu:0', dtype=torch.float16), tensor(1.1748, device='xpu:0', dtype=torch.float16), tensor(1.4131, device='xpu:0', dtype=torch.float16)]
 The total similarity:
-[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.10670731707317073, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
-[2024-01-24 04:01:30,866] [INFO] [launch.py:347:main] Process 38169 exits successfully.
+[1.0, 1.0, 1.0, 1.0, 0.9889558232931727, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9587366276107998, 1.0, 1.0, 1.0, 1.0, 1.0, 0.13321492007104796, 1.0, 1.0, 0.10670731707317073, 1.0, 1.0, 1.0, 1.0, 1.0, 0.26373626373626374, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[2024-01-31 03:53:25,846] [INFO] [launch.py:347:main] Process 823227 exits successfully.

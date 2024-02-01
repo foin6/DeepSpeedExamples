@@ -1,7 +1,7 @@
 import torch
 from tqdm import tqdm
 import deepspeed
-from transformers import pipeline, AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM
 from difflib import SequenceMatcher
 from argparse import ArgumentParser
 from deepspeed.accelerator import get_accelerator
@@ -120,10 +120,6 @@ if args.num_inputs < len(test_inputs):
 else:
     print_0(f"Warning: num_inputs ({args.num_inputs}) is greater than the number of test inputs ({len(test_inputs)}). Using all test inputs.")
     inputs = test_inputs
-
-data_type = getattr(torch, args.dtype)
-pipe = pipeline('text-generation', args.model, torch_dtype=data_type, device=torch.device(get_accelerator().device_name(0)))
-# pipe = pipeline('text-generation', args.model, torch_dtype=data_type)
         
 # Run the baseline model and calculate self-perplexity
 ppl_list = list()
@@ -131,8 +127,7 @@ similar_list = list()
 cnt = 1
 for prompt in inputs:
     print_0("\n\n===================================== No.{} input Processing =====================================".format(cnt))
-    bl_out = pipe(prompt, do_sample=False, min_length=args.min_length, max_length=args.max_length)
-    bl_out_text = bl_out[0]['generated_text']
+    bl_out_text = get_baseline_outputs(prompt)
     baseline_out_text = get_baseline_outputs(prompt)
     print_0(f"original baseline output:\n {bl_out_text}")
     print_0(f"baseline output:\n {baseline_out_text}")

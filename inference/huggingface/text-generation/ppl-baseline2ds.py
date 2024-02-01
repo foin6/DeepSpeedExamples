@@ -41,6 +41,20 @@ def get_baseline_outputs(prompt):
         prompt = prompt + predict_word
     return prompt
 
+def get_ds_outputs(prompt, model_ds):
+    prompt_ids =  tokenizer(prompt, return_tensors="pt")['input_ids'][0]
+    for _ in range(output_len-len(prompt_ids)):
+        input_encode = tokenizer(prompt, return_tensors="pt").to(device)
+        with torch.no_grad():
+            module = model_ds.module(**input_encode)
+            last_word_logits = module.logits[0, -1, :]
+            last_word_logits[eos_id] = -float("inf")
+        last_word_probs = torch.softmax(last_word_logits, dim=-1)
+        max_prob_idx = torch.argmax(last_word_probs, dim=-1)
+        predict_word = tokenizer.decode(max_prob_idx)
+        prompt = prompt + predict_word
+    return prompt
+
 def cal_cross_perplexity(ds_input, ds_output):
     ds_input_ids = tokenizer(ds_input, return_tensors="pt")['input_ids'][0]
     ds_output_ids = tokenizer(ds_output, return_tensors="pt")['input_ids'][0]
@@ -123,9 +137,7 @@ else:
 
 data_type = getattr(torch, args.dtype)
 pipe = pipeline('text-generation', args.model, torch_dtype=data_type, device=torch.device(get_accelerator().device_name(0)))
-        
-# Initialize the model with DeepSpeed
-pipe.model = deepspeed.init_inference(pipe.model, dtype=data_type, replace_with_kernel_inject=args.use_kernel)
+model_ds = deepspeed.init_inference(pipe.model, dtype=data_type, replace_with_kernel_inject=args.use_kernel) # for ds
         
 # Run the DeepSpeed model and calculate cross perplexity
 ppl_list = list()
@@ -133,8 +145,7 @@ similar_list = list()
 cnt = 1
 for prompt in inputs:
     print_0("\n\n===================================== No.{} input Processing =====================================".format(cnt))
-    ds_out = pipe(prompt, do_sample=False, min_length=args.min_length, max_length=args.max_length)
-    ds_out_text = ds_out[0]['generated_text']
+    ds_out_text = get_ds_outputs(prompt, model_ds)
     baseline_out_text = get_baseline_outputs(prompt)
     print_0(f"deepspeed output:\n {ds_out_text}")
     print_0(f"baseline output:\n {baseline_out_text}")
