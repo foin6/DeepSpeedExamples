@@ -91,8 +91,11 @@ The DSPipeline class helps to load the model and run inference on it, given thes
 # DeepSpeed HuggingFace Compare
 
 The ds-hf-compare script can be used to compare the text generated outputs of DeepSpeed with kernel injection and HuggingFace inference of a model with the same parameters on a single GPU.
+The 4 "ppl" related script can be used to calculate perplexity in four scenarios.
 
 ## Usage
 Examples can be run as follows:
 <pre>deepspeed --num_gpus 1 ds-hf-compare.py --model [model name/path] --dtype [data type] --num_inputs [number of test inputs] --print_outputs
+</pre>
+<pre>deepspeed --num_gpus 1 ["ppl-" related script name] --model [model name/path]
 </pre>
