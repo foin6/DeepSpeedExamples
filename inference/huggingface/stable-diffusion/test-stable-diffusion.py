@@ -4,6 +4,7 @@ import os
 from local_pipeline_stable_diffusion import StableDiffusionPipeline
 from diffusers import DiffusionPipeline
 import argparse
+from deepspeed.accelerator import get_accelerator
 
 # In this example the SD inference pipeline is optimized based on recommendations in the research paper
 # titled "Selective Guidance: Are All the Denoising Steps of Guided Diffusion Important?"(https://arxiv.org/abs/2305.09847).
@@ -26,9 +27,9 @@ args = parser.parse_args()
 
 model = args.name
 local_rank = int(os.getenv("LOCAL_RANK", "0"))
-device = torch.device(f"cuda:{local_rank}")
+device = torch.device(get_accelerator().device_name(local_rank))
 world_size = int(os.getenv('WORLD_SIZE', '1'))
-generator = torch.Generator(device=torch.cuda.current_device())
+generator = torch.Generator(device=get_accelerator().current_device())
 
 if args.use_local_pipe:
     pipe = StableDiffusionPipeline.from_pretrained(model, torch_dtype=torch.half)
@@ -56,6 +57,8 @@ pipe = deepspeed.init_inference(
     )
 
 generator.manual_seed(seed)
+import ipdb
+ipdb.set_trace()
 if args.use_local_pipe:
     deepspeed_image = pipe(args.prompt, guidance_scale=args.guidance_scale, generator=generator, opt_percentage=args.opt_percentage).images[0]
 else:
