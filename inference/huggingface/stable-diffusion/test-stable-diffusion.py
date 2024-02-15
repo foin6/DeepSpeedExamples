@@ -57,8 +57,6 @@ pipe = deepspeed.init_inference(
     )
 
 generator.manual_seed(seed)
-import ipdb
-ipdb.set_trace()
 if args.use_local_pipe:
     deepspeed_image = pipe(args.prompt, guidance_scale=args.guidance_scale, generator=generator, opt_percentage=args.opt_percentage).images[0]
 else:
